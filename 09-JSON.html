@@ -23,17 +23,25 @@
     </button>
 
     <button onclick ="
-      resetScore();
+      localStorage.removeItem('score');
     ">
       Reset Score
     </button>
 
     <script>
-      const score = {
-          wins   : 0, 
-          losses : 0, 
-          ties   : 0 
+      let score = JSON.parse(localStorage.getItem('score')) || {
+        wins : 0,
+        losses : 0,
+        ties : 0
+      };
+
+      /*
+        if(!score){
+          wins : 0,
+          losses : 0,
+          ties : 0
         };
+      */
 
       function playGame(playerMove){
         const computerMove = pickComputerMove();
@@ -81,13 +89,6 @@
       }
 
       localStorage.setItem('score', JSON.stringify(score));
-
-      function resetScore(){
-        score.wins = 0;
-        score.losses = 0;
-        score.ties = 0;
-      }
-
 
       function pickComputerMove(){
         const randomNumber = Math.random();

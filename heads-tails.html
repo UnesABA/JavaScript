@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick ="
+        playGame('heads')
+      ">
+      Heads
+    </button>
+    <button onclick ="
+        playGame('tails')
+      ">
+      Tails
+    </button>
+    <script>
+      let result = '';
+      const score ={
+        wins : 0,
+        losses : 0
+      };
+
+      function computerPick(){
+        const randomNumber = Math.random();
+          if (randomNumber < 0.5){
+            result = 'heads'
+          }
+          else{
+            result = 'tails';
+          }
+        }
+    
+      function playGame(myGuess){
+        computerPick();
+        if(result === 'heads'){
+          alert(`You Win.`);
+        }
+        else if(result === 'tails'){
+          alert('You Lose.');
+        }
+
+        alert(score);
+      }
+
+      
+      
+    </script>
+  </body>
+</html>
