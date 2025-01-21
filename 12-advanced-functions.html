@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    
+    <button onclick ="" class ="js-button">Click</button>
+    <script>
+      /*
+      const buttonElement = document.querySelector('.js-button');
+
+      const eventListener = () => {
+        console.log('Hello');
+      }
+
+      buttonElement.addEventListener('click', eventListener);
+
+      buttonElement.removeEventListener('click', eventListener)
+
+      buttonElement.addEventListener('click', () => {
+        console.log('Hello again');
+      });
+      */
+
+      /*function greeting(){
+        console.log('hello');
+      }
+
+      greeting();   
+
+      const function1 = function() {
+        console.log('hello2');
+      };
+
+      console.log(function1);
+      console.log(typeof(function1));
+
+      const object1 = {
+        name: 2,
+        fun: function greeting(){
+          console.log('hello3');
+        }
+      };
+
+      object1.fun();
+      //console.log(typeof(object1.fun));
+      */
+
+      /*function display(){
+        console.log("younes");
+      }
+
+      function run(param){
+        param();
+      }
+
+      run(display());
+      */
+
+      /*setTimeout(()=>{
+        console.log(new Date().getUTCMilliseconds());
+        console.log('1');
+      }, 5000);
+
+      console.log(new Date().getUTCMilliseconds());
+      console.log('show me immediately');
+      */
+      /*console.log('Hello Younes again');*/
+      /*setInterval(function(){
+        console.log('Hello Younes');
+      }, 3000);
+      */
+      /*
+      [
+        'wash dishes',
+        'make dinner',
+        'watch YouTube'
+      ].forEach((value, index) =>{
+        if(value === 'wash dishes'){
+          return;
+        }
+        console.log(index);
+        console.log(value);
+      });
+
+      const arrowFunction = () => {
+        console.log('Hello');
+      };
+
+      console.log(typeof(arrowFunction));
+      arrowFunction();  
+      */
+
+      console.log([1, 10, -5, 6].filter((value, index) => {
+        /*
+        if(value >= 0){
+          return true;
+        }else{
+          return false;
+        }
+        */
+        return value >= 0;
+      }));
+
+      console.log([2, 1, 4].map((value, index) => {
+        return value * 2;
+      }));
+
+      console.log([2, 1, 4].map(value => value * 2));
+
+    </script>
+  </body>
+</html> 
